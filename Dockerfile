@@ -33,7 +33,7 @@ RUN echo "Installing dependencies..." && \
 
 RUN echo "Downloading and building OpenPose..." && \
 	git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose.git && \
-	sed -i "1iset(BUILD_PYTHON TRUE)" /openpose/CMakeLists.txt
+	sed -i "1iset(BUILD_PYTHON TRUE)" /openpose/CMakeLists.txt \
 	mkdir -p /openpose/build && \
 	cd /openpose/build && \
 	cmake .. && \
